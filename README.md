@@ -134,13 +134,14 @@ Result:
 
 ###### Bare URLs
 
-- If you put in a bare url like `https://example.com` without a title (e.g. `[link]` in `[link](https://example.com)`) it should be parsed as a URL. But, in some cases you want to set apart a URL from the surrounding punctuation. In this case, the URL can be defined by putting it in angle brackets, `<` and `>`, which allows us to differentiate it from punctuation around it.
+- If you put in a bare url like `https://example.com` without a title (e.g. `[link]` in `[link](https://example.com)`) it should be parsed regularly as a URL. But, in some cases you might want to set apart a URL from the surrounding punctuation. In such cases, the URL can be defined by putting it in angle brackets, `<` and `>`, which allows us to differentiate it from punctuation around it.
 
 
 #### Emphasis
 
 - _italic_: `_italic_`
 - **bold**: `*bold*`
+- Doubling either the underscore or the asterisk should not change between italics and bold. If a user types a double underscore or asterisk, then the space _surrounding_ the intended emphasized text would be emphasized, not the actual text itself.
 
 #### Code
 
