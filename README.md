@@ -24,38 +24,6 @@ text and `0` is the index of the mention in the `mentions` array.
 }
 ```
 
-## Web components
-
-**Note: This is likely highly controversial. There are indeed problems with implementing it in all formats. We should look for ways to solve those issues instead of casting the entire concept aside. If you have ideas, please, feel free to open an issue with them to discuss.**
-
-- Web Components are an evolving technology. They are something that we need to contribute to the development of. They are an amazing asset that developers have as we continue integration of the web with media. They will greatly expand the usability and enjoyability of TFM for writers. For these reasons, I believe they should be included in the specification.
-
-The syntax is as follows
-
-```markdown
-  *[attributes: of, webComponents: tag, go: here, twitter: bananapartyblaze]{!tag > content /User content that would go inside the tag}(webcomponent-namehere)
-```
-
-or
-
-```markdown
-   *[attributes: of, webComponents: tag, go: here, twitter: bananapartyblaze]
-    {
-      !tag > content /
-      User content that would go inside the tag
-    }(webcomponent-namehere)
-```
-
-The attributes within the brackets (`[` and `]`), `attributes: of`, `webComponents: tag`, `go: here`, `twitter: banana` are the attributes of the Web Component element itself. 
-
-Within the curly braces (`{` and `}`) there are two types of content. First is the element tag, `!tag > content /`. This would be equivalent to `<tag>content</tag>`. The `!tag` is the declaration of the name of the tag. The `>` indicates that the tag name is over, and that the content within the tag is beginning. The `/` indicates that the content of the declared tag is over. Newlines can also signify that the content of the declared tag is over.
-
-The content without a `!` in front of it is considered the body content of the root element of the Web Component.
-
-Finally, the name of the web component is declared within the `(` and `)`. This will call the web component, load the Polyfill of choice and the HTML template through `rel="import"`.
-
-
-
 
 ## Block elements 
 
